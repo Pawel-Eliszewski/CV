@@ -1,0 +1,19 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Online CV Paweł Eliszewski",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pawel-Eliszewski/CV.git"
+  },
+  "author": "Paweł Eliszewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pawel-Eliszewski/CV/issues"
+  },
+  "homepage": "https://pawel-eliszewski.netlify.app"
+}
