@@ -1,51 +1,38 @@
-// Add your javascript here
-// Don't forget to add it into respective layouts where this js file is needed
-// import "../js/aos";
-// import "../js/now-ui-kit";
-// import "../js/core/bootstrap.min.js";
-// import "../js/core/bootstrap.min.js";
-// import "../js/core/popper.min.js";
+import AOS from "aos";
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
-    // uncomment below for on-scroll animations to played only once
+    // uncomment below for on-scroll animations to be played only once
     // once: true
   }); // initialize animate on scroll library
 });
 
 // Smooth scroll for links with hashes
-$("a.smooth-scroll").click(function (event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $("html, body").animate(
-        {
-          scrollTop: target.offset().top,
-        },
-        1000,
-        function () {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) {
-            // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          }
-        }
+const smoothScrollLinks = document.querySelectorAll("a.smooth-scroll");
+
+smoothScrollLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (
+      location.pathname.replace(/^\//, "") ===
+        link.pathname.replace(/^\//, "") &&
+      location.hostname === link.hostname
+    ) {
+      const target = document.querySelector(link.hash);
+      const nameTarget = document.querySelector(
+        `[name="${link.hash.slice(1)}"]`
       );
+      const scrollTarget = target || nameTarget;
+
+      if (scrollTarget) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: scrollTarget.offsetTop,
+          behavior: "smooth",
+        });
+        scrollTarget.tabIndex = -1;
+        scrollTarget.focus();
+      }
     }
-  }
+  });
 });
