@@ -7621,7 +7621,7 @@ Created using IcoMoon - icomoon.io
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url('/images/worldmap.jpg');
+  background-image: url('/src/images/worldmap.jpg');
   background-size: cover;
   align-items: center;
   background-position: center;
