@@ -5322,7 +5322,6 @@ button.close {
 .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 10px;
     left: 0;
     z-index: 15;
     display: flex;
@@ -5331,7 +5330,7 @@ button.close {
     margin-right: 15%;
     margin-left: 15%;
     list-style: none;
-    top: 270px;
+    top: 315px;
 }
 
 @media (min-width:320px) and (max-width: 768px) {
