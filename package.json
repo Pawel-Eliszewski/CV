@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Pawel-Eliszewski/CV/issues"
   },
-  "homepage": "https://pawel-eliszewski.netlify.app"
+  "homepage": "https://pawel-eliszewski.netlify.app",
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
 }
