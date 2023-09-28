@@ -11,7 +11,7 @@ export default defineConfig({
   },
   rollupOutputOptions: {
     output: {
-      assetFileNames: "/src/assets/[name].[ext]",
+      assetFileNames: "/assets/[name].[ext]",
     },
   },
 });
