@@ -7625,18 +7625,40 @@ Created using IcoMoon - icomoon.io
     min-height: 550px;
   }
 
-  span.progress-badge {
+  span .progress-badge {
     max-width: 270px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 480px) {
+  span.progress-badge {
+    max-width: 230px;
+  }
+}
+
+@media (min-width: 375px) {
 
   .carousel-item-next,
   .carousel-item-prev,
   .carousel-item.active {
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  span.progress-badge {
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 480px) {
+  span.progress-badge {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1199px) {
+  span.progress-badge {
+    max-width: 430px;
   }
 }
 
@@ -7648,22 +7670,6 @@ Created using IcoMoon - icomoon.io
 
 .cc-twitter:hover i {
   color: #1da1f2;
-}
-
-.cc-google-plus:hover i {
-  color: #dd4b39;
-}
-
-.cc-instagram:hover i {
-  color: #405de6;
-}
-
-/* Credit Style */
-a.credit {
-  color: inherit;
-  border-bottom: 1px dashed;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* Common Style */

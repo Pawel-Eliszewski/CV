@@ -3,10 +3,23 @@ import AOS from "aos";
 const navbar = document.querySelector(".navbar");
 const section1 = document.querySelector(".profile-page");
 const burgerBtn = document.querySelector(".navbar-toggler");
-const navMobile = document.getElementById("navigation");
+const htmlElement = document.documentElement;
+const mobileLinks = document.querySelectorAll(
+  ".nav-link.smooth-scroll.sections"
+);
 
-burgerBtn.addEventListener("click", () => {
-  navMobile.classList.remove("collapse");
+function toggleNavClass() {
+  if (htmlElement.classList.contains("nav-open")) {
+    htmlElement.classList.remove("nav-open");
+  } else {
+    htmlElement.classList.add("nav-open");
+  }
+}
+
+burgerBtn.addEventListener("click", toggleNavClass);
+
+mobileLinks.forEach(function (element) {
+  element.addEventListener("click", toggleNavClass);
 });
 
 let isScrolled = false;
