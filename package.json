@@ -5,6 +5,7 @@
   "main": "index.js",
   "homepage": "https://pawel-eliszewski.netlify.app/",
   "scripts": {
+    "build": "vite build && cpy '/src/assets/**/*.*' dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,8 @@
     "url": "https://github.com/Pawel-Eliszewski/CV/issues"
   },
   "devDependencies": {
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "vite-plugin-copy": "^0.1.6"
   },
   "dependencies": {
     "aos": "^2.3.4"
