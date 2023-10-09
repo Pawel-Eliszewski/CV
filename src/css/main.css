@@ -3336,16 +3336,6 @@ body {
   display: inline-flex;
 }
 
-.btn-twitter {
-  color: #55acee;
-}
-
-.btn-twitter:hover,
-.btn-twitter:focus,
-.btn-twitter:active {
-  color: #3ea1ec;
-}
-
 .btn-facebook {
   color: #3b5998;
 }
@@ -3354,16 +3344,6 @@ body {
 .btn-facebook:focus,
 .btn-facebook:active {
   color: #344e86;
-}
-
-.btn-google {
-  color: #dd4b39;
-}
-
-.btn-google:hover,
-.btn-google:focus,
-.btn-google:active {
-  color: #d73925;
 }
 
 .btn-linkedin {
@@ -7667,8 +7647,12 @@ Created using IcoMoon - icomoon.io
   color: #3b5998;
 }
 
-.cc-twitter:hover i {
+.cc-linkedin:hover i {
   color: #1da1f2;
+}
+
+.cc-github:hover i {
+  color: black;
 }
 
 /* Common Style */
